@@ -1,0 +1,7 @@
+<main id="main-container">
+  <h1>The Home Page: ${this.data.name || 'Placeholder'}</h1>
+
+  <div hx-get="/chat" hx-swap="outerHTML" hx-trigger="load">
+    <h3>Loading Chat...</h3>
+  </div>
+</main>

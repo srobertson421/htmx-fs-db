@@ -1,0 +1,9 @@
+<div id="chat-container">
+  <form hx-post="/chat" hx-swap="innerHTML" hx-target="#chat-container">
+    <input type="text" name="message" id="message" placeholder="Enter a message" />
+    <button type="submit">Send</button>
+  </form>
+  <div>
+    ${this.data.messages.map(message => `<div>${message.createdAt}: ${message.text}</div>`).join('')}
+  </div>
+</div>
